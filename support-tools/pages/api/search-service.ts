@@ -17,7 +17,7 @@ type Response = Result | ErrorResponse;
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Response>) {
   try {
     const request = JSON.parse(req.body);
-    const response = await fetch(String(process.env.GET_SERVECE), {
+    const response = await fetch(String(process.env.GET_SERVICE), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
